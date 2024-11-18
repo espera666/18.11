@@ -28,6 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build docker image 
         run: docker build -t ghcr.io/espera666/18.11/student:latest ./node/
+      - name: Build docker image 
+        run: docker build -t ghcr.io/espera666/18.11/student1:latest ./node1/
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
