@@ -38,3 +38,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push docker image 
         run: docker push ghcr.io/espera666/18.11/student:latest
+      - name: Push docker image 
+        run: docker push ghcr.io/espera666/18.11/student:latest
+
