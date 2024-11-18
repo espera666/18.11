@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build docker image 
-        run: docker build -t ghcr.io/espera666/18.11/student:latest ./node/1
+        run: docker build -t ghcr.io/espera666/18.11/student:latest ./node/
