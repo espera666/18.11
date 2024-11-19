@@ -42,6 +42,7 @@ jobs:
           token: 8117463992:AAFrGEnqWPGGQZTFTU7OhleZygwm66fi5dI          
           message: |
              success
+          image: 18.11/optimize.webp
       - name: send telegram message on push 
         if: failure()         
         uses: appleboy/telegram-action@master 
