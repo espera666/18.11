@@ -35,6 +35,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: send telegram message on push 
+        if: success()         
         uses: appleboy/telegram-action@master 
         with:
           to: 1141680974
@@ -42,10 +43,6 @@ jobs:
           message: |
                Сообщение (строка№1)
                Сообщение (строка№2)
-      - name: The job has succeeded
-        if: success()     
-      - name: The job has faild 
-        if: failure() 
       - name: Push docker image 
         run: docker push ghcr.io/espera666/18.11/student:latest
   build_python:
