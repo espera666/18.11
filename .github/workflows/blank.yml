@@ -41,7 +41,8 @@ jobs:
           to: 1141680974
           token: 8117463992:AAFrGEnqWPGGQZTFTU7OhleZygwm66fi5dI          
           message: |
-          image: 18.11/optimize.webp
+             success
+          photo: "./optimize.webp" 
       - name: send telegram message on push 
         if: failure()         
         uses: appleboy/telegram-action@master 
