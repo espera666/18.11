@@ -34,6 +34,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: send telegram message on push 
+        uses: appleboy/telegram-action@master 
+        with:
+          to: 1141680974
+          token: 8117463992:AAFrGEnqWPGGQZTFTU7OhleZygwm66fi5dI          
+          message: |
+               Сообщение (строка№1)
+               Сообщение (строка№2)        
       - name: Push docker image 
         run: docker push ghcr.io/espera666/18.11/student:latest
   build_python:
@@ -51,6 +59,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push docker image 
         run: docker push ghcr.io/espera666/18.11/student1:latest
-
-        
+       
 
