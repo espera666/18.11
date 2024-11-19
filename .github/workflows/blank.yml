@@ -41,7 +41,11 @@ jobs:
           token: 8117463992:AAFrGEnqWPGGQZTFTU7OhleZygwm66fi5dI          
           message: |
                Сообщение (строка№1)
-               Сообщение (строка№2)        
+               Сообщение (строка№2)
+      - name: The job has succeeded
+        if: ${{ success() }}     
+      - name: The job has faild 
+        if: ${{ failure() }}
       - name: Push docker image 
         run: docker push ghcr.io/espera666/18.11/student:latest
   build_python:
