@@ -42,6 +42,14 @@ jobs:
           token: 8117463992:AAFrGEnqWPGGQZTFTU7OhleZygwm66fi5dI          
           message: |
              success
+      - name: send telegram message on push 
+        if: failure()         
+        uses: appleboy/telegram-action@master 
+        with:
+          to: 1141680974
+          token: 8117463992:AAFrGEnqWPGGQZTFTU7OhleZygwm66fi5dI          
+          message: |
+            fail(    
       - name: Push docker image 
         run: docker push ghcr.io/espera666/18.11/student:latest
   build_python:
