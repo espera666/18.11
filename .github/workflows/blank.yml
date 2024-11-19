@@ -43,9 +43,9 @@ jobs:
                Сообщение (строка№1)
                Сообщение (строка№2)
       - name: The job has succeeded
-        if: ${{ success() }}     
+        if: success()     
       - name: The job has faild 
-        if: ${{ failure() }}
+        if: failure() 
       - name: Push docker image 
         run: docker push ghcr.io/espera666/18.11/student:latest
   build_python:
